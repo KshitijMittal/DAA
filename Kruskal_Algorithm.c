@@ -1,4 +1,4 @@
-// Kruskal Program
+// Kruskal Algorithm
 
 #include <stdio.h>
 #define MAX 100
