@@ -17,15 +17,12 @@ return c[n, W]
 */
 
 #include <stdio.h>
-#define MAX 100
+#define MAX 105
 
-int max(int a, int b) {
-    return (a > b) ? a : b;
-}
+int c[MAX][MAX];
 
 int knapsack(int W, int wt[], int val[], int n) {
     int i, l;
-    int c[MAX][MAX];  // DP table
 
     // Initialize base cases
     for (l = 0; l <= W; l++) {
@@ -47,6 +44,17 @@ int knapsack(int W, int wt[], int val[], int n) {
     return c[n][W];
 }
 
+// Print DP table
+void printTable(int n, int W) {
+    printf("\nDP Table:\n");
+    for (int i = 0; i <= n; i++) {
+        for (int l = 0; l <= W; l++) {
+            printf("%3d ", c[i][l]);
+        }
+        printf("\n");
+    }
+}
+
 int main() {
     int n, W, i;
     int val[MAX], wt[MAX];
@@ -64,7 +72,10 @@ int main() {
     scanf("%d", &W);
 
     int result = knapsack(W, wt, val, n);
-    printf("Maximum value in Knapsack = %d\n", result);
+
+    printTable(n, W);
+
+    printf("\nMaximum value in Knapsack = %d\n", result);
 
     return 0;
 }
