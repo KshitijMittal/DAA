@@ -55,6 +55,27 @@ void printTable(int n, int W) {
     }
 }
 
+// Print optimal items for solution
+void printOptimalItems(int wt[], int val[], int n, int W) {
+    int res = c[n][W];
+    int w = W;
+    int picked = 0;   // track whether any item was picked
+
+    printf("\nItems included in the optimal solution:\n");
+    for (int i = n; i > 0 && res > 0; i--) {
+        if (res != c[i - 1][w]) {
+            printf("Item %d (Weight: %d, Value: %d)\n", i, wt[i - 1], val[i - 1]);
+            res -= val[i - 1];
+            w -= wt[i - 1];
+            picked = 1;  // at least one item picked
+        }
+    }
+    if (!picked) {
+        printf("No items included.\n");
+    }
+    printf("\n");
+}
+
 int main() {
     int n, W, i;
     int val[MAX], wt[MAX];
@@ -76,6 +97,8 @@ int main() {
     printTable(n, W);
 
     printf("\nMaximum value in Knapsack = %d\n", result);
+
+    printOptimalItems(wt, val, n, W);
 
     return 0;
 }
