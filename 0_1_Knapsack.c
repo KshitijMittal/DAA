@@ -82,12 +82,9 @@ int main() {
 
     printf("Enter number of items: ");
     scanf("%d", &n);
-    printf("Enter weights and values of items:\n");
     for (i = 0; i < n; i++) {
-        printf("Item %d - Weight: ", i + 1);
-        scanf("%d", &wt[i]);
-        printf("Item %d - Value: ", i + 1);
-        scanf("%d", &val[i]);
+        printf("Enter weight and value of item %d: ", i + 1);
+        if (scanf("%d %d", &wt[i], &val[i]) != 2) return 1;
     }
     printf("Enter maximum weight of knapsack: ");
     scanf("%d", &W);
