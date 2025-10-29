@@ -15,7 +15,6 @@ MST_PRIM(G, w, r)
 12 return π
 */
 
-// ...existing code...
 #include <stdio.h>
 #define MAX 100
 #define INF 1000000000
@@ -24,10 +23,6 @@ struct Edge {
     int u, v, weight;
 };
 
-/* Implements Prim exactly following the pseudocode:
-   - uses key[], π (parent[]), and Q represented by inQ[]
-   - builds adjacency from the edge list so the main() stays like Kruskal's code
-*/
 void Prim(struct Edge edges[], int n, int vertices) {
     int adj[MAX][MAX];
     int key[MAX], parent[MAX], inQ[MAX];
@@ -88,7 +83,7 @@ void Prim(struct Edge edges[], int n, int vertices) {
     int totalCost = 0;
     for (int v = 0; v < vertices; ++v) {
         if (parent[v] != -1) {
-            printf("%d -- %d == %d\n", parent[v], v, key[v]);
+            printf("%d -- %d == %d\n", parent[v] + 1, v + 1, key[v]);
             totalCost += key[v];
         }
     }
@@ -105,9 +100,13 @@ int main() {
     if (scanf("%d", &n) != 1) return 1;
 
     for (int i = 0; i < n; i++) {
-        printf("Enter edge %d (u v weight): ", i + 1);
+        printf("Enter edge %d (u, v, weight): ", i + 1);
         if (scanf("%d %d %d", &edges[i].u, &edges[i].v, &edges[i].weight) != 3) return 1;
+    // Convert 1-based input to 0-based indices:
+        edges[i].u -= 1;
+        edges[i].v -= 1;
     }
+
 
     Prim(edges, n, vertices);
 
