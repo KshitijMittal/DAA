@@ -99,3 +99,23 @@ int main() {
 
     return 0;
 }
+
+/*
+Output Example:
+Enter number of items: 4
+Enter weight and value of item 1: 2 3
+Enter weight and value of item 2: 3 4
+Enter weight and value of item 3: 4 5
+Enter weight and value of item 4: 5 6
+Enter maximum weight of knapsack: 5
+DP Table:
+  0   0   0   0   0   0
+  0   0   3   3   3   3
+  0   0   3   4   4   7
+  0   0   3   4   5   7
+  0   0   3   4   5   7
+Maximum value in Knapsack = 7
+Items included in the optimal solution:
+Item 2 (Weight: 3, Value: 4)
+Item 1 (Weight: 2, Value: 3)
+*/
