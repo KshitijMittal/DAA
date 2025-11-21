@@ -23,7 +23,7 @@ void main() {
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
 
-    int arr[n]; 
+    int arr[n];
 
     printf("Enter %d sorted elements:\n", n);
     for (i = 0; i < n; i++) {
@@ -35,3 +35,16 @@ void main() {
 
     binarySearch(arr,n,key);
 }
+
+/*
+Output Example:
+Enter the number of elements in the array: 5
+Enter 5 sorted elements:
+1
+3
+5
+7
+9
+Enter the element to search: 7
+Element 7 found at index 3.
+*/
