@@ -1,4 +1,4 @@
-// Dijkstra's Algorithm 
+// Dijkstra's Algorithm
 
 #include <stdio.h>
 #include <limits.h>
@@ -50,3 +50,21 @@ int main() {
 
 return 0;
 }
+
+/*
+Output Example:
+Enter number of vertices: 5
+Enter the adjacency matrix (use 9999 for no edge):
+0 10 9999 30 100
+9999 0 50 9999 9999
+9999 9999 0 20 100
+9999 9999 9999 0 10
+9999 9999 9999 9999 0
+Enter source vertex: 0
+Shortest distances from vertex 0:
+To 0 = 0
+To 1 = 10
+To 2 = 60
+To 3 = 30
+To 4 = 40
+*/
