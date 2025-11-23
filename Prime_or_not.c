@@ -1,4 +1,4 @@
-// Check if the number is prime or not 
+// Check if the number is prime or not
 
 #include <stdio.h>
 int main() {
@@ -21,3 +21,9 @@ int main() {
     printf("Prime number\n");
     return 0;
 }
+
+/*
+Output Example:
+Enter a number: 29
+Prime number
+*/
