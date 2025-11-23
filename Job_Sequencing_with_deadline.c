@@ -23,7 +23,7 @@ int main() {
                 job[j] = job[j + 1];
                 job[j + 1] = tempjob;
 
-                // Swap deadline 
+                // Swap deadline
                 int tempdeadline = deadline[j];
                 deadline[j] = deadline[j + 1];
                 deadline[j + 1] = tempdeadline;
@@ -55,7 +55,7 @@ int main() {
             totalprofit += profit[i];
             scheduled_idx[k++] = i;   // store index i (in sorted arrays)
             current_deadline -= deadline[i];
-        } 
+        }
     }
 
     // Print scheduled jobs using stored indices
@@ -74,3 +74,14 @@ int main() {
 
     return 0;
 }
+
+/*
+Output Example:
+Enter the number of jobs: 4
+Enter deadline and profit of job 1: 2 100
+Enter deadline and profit of job 2: 1 19
+Enter deadline and profit of job 3: 2 27
+Enter deadline and profit of job 4: 1 25
+Scheduled jobs: J1 J3
+Total Profit = (100+27) = 127
+*/
