@@ -98,3 +98,9 @@ int main() {
 
     return 0;
 }
+
+/*
+Output Example:
+Minimum: -5
+Maximum: 100
+*/
