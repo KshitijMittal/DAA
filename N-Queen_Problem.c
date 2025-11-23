@@ -53,3 +53,8 @@ int main() {
     printf("Total solutions for %d-Queens: %d\n", N, solutions);
     return 0;
 }
+
+/*
+Output Example:
+Total solutions for 4-Queens: 2
+*/
