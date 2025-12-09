@@ -112,3 +112,22 @@ int main() {
 
     return 0;
 }
+
+/*
+Output Example:
+Enter number of vertices: 5
+Enter number of edges: 7
+Enter edge 1 (u, v, weight): 1 2 2
+Enter edge 2 (u, v, weight): 1 3 3
+Enter edge 3 (u, v, weight): 2 3 1
+Enter edge 4 (u, v, weight): 2 4 4
+Enter edge 5 (u, v, weight): 3 4 5
+Enter edge 6 (u, v, weight): 3 5 6
+Enter edge 7 (u, v, weight): 4 5 7
+Edges in the Minimum Spanning Tree:
+2 -- 3 == 1
+1 -- 2 == 2
+2 -- 4 == 4
+3 -- 5 == 6
+Total cost of Minimum Spanning Tree: 13
+*/
