@@ -46,3 +46,11 @@ int main() {
     printArray(arr, n);
     return 0;
 }
+
+/*
+Output Example:
+Unsorted array:
+10 7 8 9 1 5
+Sorted array:
+1 5 7 8 9 10
+*/
