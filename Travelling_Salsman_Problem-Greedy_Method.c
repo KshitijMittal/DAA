@@ -54,3 +54,14 @@ int main() {
     printf("Minimum cost of travelling salesman tour: %d\n", min_cost);
     return 0;
 }
+
+/*
+Output Example:
+Enter number of cities: 4
+Enter cost matrix:
+0 10 15 20
+10 0 35 25
+15 35 0 30
+20 25 30 0
+Minimum cost of travelling salesman tour: 80
+*/
